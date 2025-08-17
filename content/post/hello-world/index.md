@@ -3,7 +3,7 @@ title: Hello World
 description: ⛵️起航咯
 slug: hello-world
 date: 2025-08-16 00:00:00+0000
-image: https://lyarmor.eu.org/picgo/pexels-divinetechygirl-1181676.jpg
+image: https://pic.lyarmor.eu.org/picgo/pexels-divinetechygirl-1181676.jpg
 categories:
     - 文字
 tags:
