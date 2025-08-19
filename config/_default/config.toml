@@ -1,7 +1,7 @@
 # Change baseurl before deploy
 baseurl = ""
 languageCode = "zh-cn"
-title = "lyarmor-blog"
+title = "lyarmor`s blog"
 
 # Theme i18n support
 # Available values: en, fr, id, ja, ko, pt-br, zh-cn, zh-tw, es, de, nl, it, th, el, uk, ar
@@ -12,7 +12,7 @@ defaultContentLanguage = "zh"
 hasCJKLanguage = false
 
 # Change it to your Disqus shortname before using
-disqusShortname = "lyarmor-blog"
+disqusShortname = "lyarmor`s blog"
 
 [pagination]
 pagerSize = 5
