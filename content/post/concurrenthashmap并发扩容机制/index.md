@@ -7,13 +7,14 @@ categories:
     - 编程
 tags:
     - notion
+    - JUC
 ---
 
 # 1:触发时机
 
 `ConcurrentHashMap` 的扩容主要由以下两种情况触发：
 
-1. `put`** 操作时触发**：
+1. **`put` 操作时触发**：
   - 在向 `ConcurrentHashMap` 中添加元素后，会调用 `addCount()` 方法来增加元素数量的计数。
   - 在 `addCount()` 方法内部，会检查当前 Map 中的元素数量 `s` 是否已经达到了扩容阈值 `sizeCtl`。如果 `s >= sizeCtl`，并且数组长度没有达到最大容量（`MAXIMUM_CAPACITY`），就会触发扩容。
   - **值得注意的是**，`sizeCtl` 这个变量在不同状态下有不同的含义：
@@ -116,7 +117,7 @@ tags:
 
 这是最有趣的一种情况。假设扩容线程T还在忙着迁移后面的桶（比如16、15...6号）。
 
-1. **线程P进入**`putVal`**方法**：
+1. **线程P进入** `putVal` **方法**：
   - 它计算key的hash，定位到旧`table`的4号桶（索引3）。
   - 它检查4号桶的头节点，发现是个正常的`Node`，不是`ForwardingNode`。
 1. **发现“大局有变”**:
