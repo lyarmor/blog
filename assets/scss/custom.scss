@@ -133,8 +133,12 @@ body::before {
 #main-menu {
     margin: 0;
     padding: 22px;
-    border-radius: var(--card-border-radius);
-    border: 1px solid var(--card-separator-color);
+    border-radius: 0;
+    border: 0;
+    height: 100%;
+    min-height: 0;
+    flex: 1 1 auto;
+    gap: 0;
 }
 
 #main-menu li a,
@@ -147,6 +151,33 @@ body::before {
     padding: 10px 12px;
     border-radius: 10px;
     transition: background-color 0.28s ease, color 0.28s ease;
+}
+
+#main-menu .menu-bottom-section {
+    margin-top: auto;
+}
+
+/* Only wrap real menu items in a box, exclude bottom toggle area */
+#main-menu > li:not(.menu-bottom-section) {
+    border-left: 1px solid var(--card-separator-color);
+    border-right: 1px solid var(--card-separator-color);
+    padding-left: 14px;
+    padding-right: 14px;
+    margin: 0;
+}
+
+#main-menu > li:not(.menu-bottom-section):first-child {
+    border-top: 1px solid var(--card-separator-color);
+    padding-top: 14px;
+    border-top-left-radius: var(--card-border-radius);
+    border-top-right-radius: var(--card-border-radius);
+}
+
+#main-menu > li:nth-last-child(2) {
+    border-bottom: 1px solid var(--card-separator-color);
+    padding-bottom: 14px;
+    border-bottom-left-radius: var(--card-border-radius);
+    border-bottom-right-radius: var(--card-border-radius);
 }
 
 #main-menu li a:hover,
