@@ -16,3 +16,8 @@ disqusShortname = "lyarmor`s blog"
 
 [pagination]
 pagerSize = 5
+
+[markup.tableOfContents]
+startLevel = 1
+endLevel = 4
+ordered = true
